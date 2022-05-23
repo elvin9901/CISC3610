@@ -28,6 +28,7 @@
                             // Hide preloader
                             document.getElementById('preloader').style.display = 'none';
                             document.getElementById('preloader').remove();
+
                             // Run project
                             Wick.WickFile.fromWickFile(blob, project => {
                                 project.inject(document.getElementById('wick-canvas-container'));
@@ -160,7 +161,7 @@
         </svg>
       </div>
       <div class="text">
-          <div id="loading-bar">Loading...</div>
+          <div id="loading-bar">Loading</div>
       </div>
     </div>
 

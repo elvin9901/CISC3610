@@ -1,36 +1,6 @@
 /*Wick Engine https://github.com/Wicklets/wick-engine*/
 var WICK_ENGINE_BUILD_VERSION = "2021.1.22.14.13.2";
-/*!
- * Paper.js v0.12.4 - The Swiss Army Knife of Vector Graphics Scripting.
- * http://paperjs.org/
- *
- * Copyright (c) 2011 - 2019, Juerg Lehni & Jonathan Puckey
- * http://scratchdisk.com/ & https://puckey.studio/
- *
- * Distributed under the MIT license. See LICENSE file for details.
- *
- * All rights reserved.
- *
- * Date: Sun Dec 15 21:25:00 2019 +0100
- *
- ***
- *
- * Straps.js - Class inheritance library with support for bean-style accessors
- *
- * Copyright (c) 2006 - 2019 Juerg Lehni
- * http://scratchdisk.com/
- *
- * Distributed under the MIT license.
- *
- ***
- *
- * Acorn.js
- * https://marijnhaverbeke.nl/acorn/
- *
- * Acorn is a tiny, fast JavaScript parser written in JavaScript,
- * created by Marijn Haverbeke and released under an MIT license.
- *
- */
+
 
 var paper = function(self, undefined) {
 
@@ -17385,7 +17355,7 @@ return paper;
 }.call(this, typeof self === 'object' ? self : null);
 
 /*
- * 
+ *
  * @license base64-arraybuffer
  * https://github.com/niklasvh/base64-arraybuffer
  *
@@ -17459,7 +17429,7 @@ var Base64ArrayBuffer = (function () {
 })();
 
 // @license https://stackoverflow.com/questions/14224535/scaling-between-two-number-ranges
-function convertRange( value, r1, r2 ) { 
+function convertRange( value, r1, r2 ) {
     return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
 }
 /* @license croquis.js */
@@ -19166,10 +19136,10 @@ if (!("currentTransform" in CanvasRenderingContext2D.prototype)) {
 /**
  * @license esprima.js
  * Copyright JS Foundation and other contributors, https://js.foundation/
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
- * 
+ *
  *  * Redistributions of source code must retain the above copyright
  *     notice, this list of conditions and the following disclaimer.
  *  * Redistributions in binary form must reproduce the above copyright
@@ -26047,7 +26017,7 @@ var floodfill = (function() {
 })();
 
 /**
- * @license howler.js 
+ * @license howler.js
  * howler.js v2.1.1
  *  howlerjs.com
  *
@@ -26767,8 +26737,8 @@ var floodfill = (function() {
         // Use the default sound sprite (plays the full audio length).
         sprite = '__default';
 
-        // Check if there is a single paused sound that isn't ended. 
-        // If there is, play that sound. If not, continue as usual.  
+        // Check if there is a single paused sound that isn't ended.
+        // If there is, play that sound. If not, continue as usual.
         if (!self._playLock) {
           var num = 0;
           for (var i=0; i<self._sounds.length; i++) {
@@ -28527,7 +28497,7 @@ var floodfill = (function() {
 
 /*!
  *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
- *  
+ *
  *  howler.js v2.1.1
  *  howlerjs.com
  *
@@ -29246,8 +29216,8 @@ function convex(pointset) {
     const upper = _upperTangent(pointset),
           lower = _lowerTangent(pointset);
     const convex = lower.concat(upper);
-    convex.push(pointset[0]);  
-    return convex;  
+    convex.push(pointset[0]);
+    return convex;
 }
 
 module.exports = convex;
@@ -29326,7 +29296,7 @@ Grid.prototype = {
         const cellY = this.coordToCellNum(point[1]);
         const cell = this._cells[cellX][cellY];
         let pointIdxInCell;
-        
+
         for (let i = 0; i < cell.length; i++) {
             if (cell[i][0] === point[0] && cell[i][1] === point[1]) {
                 pointIdxInCell = i;
@@ -29564,7 +29534,7 @@ const MAX_SEARCH_BBOX_SIZE_PERCENT = 0.6;
 module.exports = hull;
 
 },{"./convex.js":1,"./format.js":2,"./grid.js":3,"./intersect.js":5}],5:[function(require,module,exports){
-function ccw(x1, y1, x2, y2, x3, y3) {           
+function ccw(x1, y1, x2, y2, x3, y3) {
     const cw = ((y3 - y1) * (x2 - x1)) - ((y2 - y1) * (x3 - x1));
     return cw > 0 ? true : cw < 0 ? false : true; // colinear
 }
@@ -33861,8 +33831,8 @@ exports.prepareContent = function(name, inputData, isBinary, isOptimizedBinarySt
 
     // if inputData is already a promise, this flatten it.
     var promise = external.Promise.resolve(inputData).then(function(data) {
-        
-        
+
+
         var isBlob = support.blob && (data instanceof Blob || ['[object File]', '[object Blob]'].indexOf(Object.prototype.toString.call(data)) !== -1);
 
         if (isBlob && typeof FileReader !== "undefined") {
@@ -34721,7 +34691,7 @@ $export.P = 8;   // proto
 $export.B = 16;  // bind
 $export.W = 32;  // wrap
 $export.U = 64;  // safe
-$export.R = 128; // real proto method for `library` 
+$export.R = 128; // real proto method for `library`
 module.exports = $export;
 },{"./_core":40,"./_ctx":41,"./_global":46,"./_hide":47}],45:[function(require,module,exports){
 module.exports = function(exec){
@@ -48261,7 +48231,7 @@ Wick.WickFile = class {
         var project = Wick.Base.fromData(projectData.project);
         Wick.ObjectCache.addObject(project);
         var loadedAssetCount = 0;
-        let corruptedFiles = []; // Store a list of all files that are now missing. 
+        let corruptedFiles = []; // Store a list of all files that are now missing.
         // Immediately end if the project has no assets.
 
         if (project.getAssets().length === 0) {
@@ -48274,7 +48244,7 @@ Wick.WickFile = class {
           allAssets.forEach(assetData => {
             var assetFile = contents.files['assets/' + assetData.uuid + '.' + assetData.fileExtension];
             /**
-             * Checks if we've loaded all assets, logs an error if an error occurred 
+             * Checks if we've loaded all assets, logs an error if an error occurred
              * while loading asset files.
              */
 
@@ -49153,7 +49123,7 @@ Wick.Base = class {
     return 'Base';
   }
   /**
-   * A marker if this object is temporary. Meaning it 
+   * A marker if this object is temporary. Meaning it
    * should be garbage collected after a play.
    */
 
@@ -49401,14 +49371,14 @@ Wick.Base = class {
   }
   /**
    * Insert a child into this at specified index.
-   * 
+   *
    * The insertion is performed as if there is a dummy object placed
    * at index, then the child is moved one index past the dummy,
    * then the dummy is deleted. Therefore if the child starts out
    * inside this._children below index, then insertChild returns true and
    * this._children.indexOf(child) == index - 1. Otherwise, returns false and
    * this._children.indexOf(child) == index.
-   * 
+   *
    * @param {Wick.Base} child - the child to add.
    * @param {number} index - where to add the child
    * @returns {boolean} - true if an item before index was moved
@@ -51702,7 +51672,7 @@ Wick.Project = class extends Wick.Base {
   }
   /**
    * Returns an object associated with this project, by uuid.
-   * @param {string} uuid 
+   * @param {string} uuid
    */
 
 
@@ -52132,7 +52102,7 @@ Wick.Selection = class extends Wick.Base {
   /**
    * Select multiple objects. Must be selectable objects. Significantly faster than selecting multiple elements
    * with a select() independently.
-   * @param {object[]} objects 
+   * @param {object[]} objects
    */
 
 
@@ -53171,7 +53141,7 @@ Wick.Timeline = class extends Wick.Base {
   }
   /**
    * Forces timeline to move to the next frame.
-   * @param {number} frame 
+   * @param {number} frame
    */
 
 
@@ -53745,7 +53715,7 @@ Wick.Tween = class extends Wick.Base {
   }
   /**
    * The transformation representing the position, rotation and other elements of the tween.
-   * @type {object} 
+   * @type {object}
    */
 
 
@@ -57167,7 +57137,7 @@ Wick.Clip = class extends Wick.Tickable {
   }
   /**
    * True if the clip should sync to the timeline's position.
-   * @type {boolean} 
+   * @type {boolean}
    */
 
 
@@ -57218,7 +57188,7 @@ Wick.Clip = class extends Wick.Tickable {
   }
   /**
    * Returns the source clip of this clip if this clip is a clone. Null otherwise.
-   * 
+   *
    */
 
 
@@ -57436,7 +57406,7 @@ Wick.Clip = class extends Wick.Tickable {
   }
   /**
    * Remove a clone from the clones array by uuid.
-   * @param {string} uuid 
+   * @param {string} uuid
    */
 
 
@@ -57635,7 +57605,7 @@ Wick.Clip = class extends Wick.Tickable {
       let y = c1.y - c2.y;
       let magnitude = Math.sqrt(x * x + y * y);
       x = x / magnitude;
-      y = y / magnitude; // <x,y> is now a normalized vector from c2 to c1 
+      y = y / magnitude; // <x,y> is now a normalized vector from c2 to c1
 
       let result = {};
 
@@ -57919,7 +57889,7 @@ Wick.Clip = class extends Wick.Tickable {
     }
 
     if (options.overlap) {
-      //same as offset except instead of center to center, 
+      //same as offset except instead of center to center,
       //we will move perpendicular to the best fit line
       //of the intersection points
       let directionX, directionY;
@@ -59622,7 +59592,7 @@ Wick.Tools.Cursor = class extends Wick.Tool {
   }
   /**
    * Select multiple items simultaneously.
-   * @param {object[]} items paper items 
+   * @param {object[]} items paper items
    */
 
 
@@ -63566,7 +63536,7 @@ Wick.View.Clip = class extends Wick.View {
   //     for (let i = 0; i < ch.length; i++) {
   //         if (removedDuplicates.length > 0) {
   //             if ((Math.abs(ch[i][0] - removedDuplicates[removedDuplicates.length - 1][0]) > epsilon ||
-  //                 Math.abs(ch[i][1] - removedDuplicates[removedDuplicates.length - 1][1]) > epsilon) && 
+  //                 Math.abs(ch[i][1] - removedDuplicates[removedDuplicates.length - 1][1]) > epsilon) &&
   //                 (Math.abs(ch[i][0] - removedDuplicates[0][0]) > epsilon ||
   //                 Math.abs(ch[i][1] - removedDuplicates[0][1]) > epsilon)) {
   //                 removedDuplicates.push(ch[i]);
@@ -64113,7 +64083,7 @@ Wick.View.Path = class extends Wick.View {
   }
   /**
    * Imports raster image from Wick Object cache.
-   * @param {*} json 
+   * @param {*} json
    * @returns {boolean} True if successful import, false otherwise.
    */
 
@@ -67008,7 +66978,7 @@ Wick.GUIElement.Project = class extends Wick.GUIElement {
   }
   /**
    * Refers to mousewheel events on the timeline.
-   * @param {*} e 
+   * @param {*} e
    */
 
 
